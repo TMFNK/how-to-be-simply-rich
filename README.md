@@ -3,14 +3,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/TMFNK/how-to-be-simply-rich/actions/workflows/deploy.yml"><img src="https://github.com/TMFNK/how-to-be-simply-rich/actions/workflows/deploy.yml/badge.svg" alt="Deploy status"></a>
+  <a href="https://github.com/TMFNK/Atlas-of-Wealth/actions/workflows/deploy.yml"><img src="https://github.com/TMFNK/Atlas-of-Wealth/actions/workflows/deploy.yml/badge.svg" alt="Deploy status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License: AGPL v3"></a>
   <img src="https://img.shields.io/badge/Built%20with-Vite-646CFF?logo=vite&logoColor=white" alt="Built with Vite">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
-  <a href="https://tmfnk.github.io/how-to-be-simply-rich/"><img src="https://img.shields.io/badge/live-atlas--of--wealth-946c1f" alt="Live site"></a>
+  <a href="https://tmfnk.github.io/Atlas-of-Wealth/"><img src="https://img.shields.io/badge/live-atlas--of--wealth-946c1f" alt="Live site"></a>
 </p>
 
-<p align="center"><strong><a href="https://tmfnk.github.io/how-to-be-simply-rich/">🌐 View the live atlas</a></strong></p>
+<p align="center"><strong><a href="https://tmfnk.github.io/Atlas-of-Wealth/">🌐 View the live atlas</a></strong></p>
 
 A vibe-coded static atlas of non-financial wealth: 23 areas of life worth being rich in, grouped into 5 domains, each with a definition, a reason it matters, and a three-part daily practice.
 
@@ -73,8 +73,8 @@ To be clear, none of this makes the new version strictly "better" — the origin
 ## Quick Start
 
 ```bash
-git clone https://github.com/TMFNK/how-to-be-simply-rich.git
-cd how-to-be-simply-rich
+git clone https://github.com/TMFNK/Atlas-of-Wealth.git
+cd Atlas-of-Wealth
 npm install
 npm run dev
 ```
