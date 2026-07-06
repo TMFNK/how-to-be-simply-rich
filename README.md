@@ -12,14 +12,17 @@
 
 <p align="center"><strong><a href="https://tmfnk.github.io/how-to-be-simply-rich/">🌐 View the live atlas</a></strong></p>
 
-A static atlas of non-financial wealth: 23 areas of life worth being rich in, grouped into 5 domains, each with a definition, a reason it matters, and a three-part daily practice.
+A vibe-coded static atlas of non-financial wealth: 23 areas of life worth being rich in, grouped into 5 domains, each with a definition, a reason it matters, and a three-part daily practice.
 
 The site treats richness as a landscape rather than a flat checklist. Instead of opening on a wall of equal-weight topics, the homepage groups the ideas into a few larger domains so visitors can browse the full map first and then choose one area to reflect on.
+
+> Inspired by and based on [**How to Be Rich**](https://github.com/anvaka/how-to-be-rich) by Andrei Kashcha ([@anvaka](https://github.com/anvaka)) — same 23 wealth areas, same daily-practice philosophy. See [what's different](#whats-different-from-the-original) below.
 
 ## Contents
 
 - [What the Site Does](#what-the-site-does)
 - [Atlas Structure](#atlas-structure)
+- [What's Different From the Original](#whats-different-from-the-original)
 - [Quick Start](#quick-start)
 - [Project Structure](#project-structure)
 - [Editing Content](#editing-content)
@@ -54,6 +57,18 @@ The current domain model is:
 - `Vitality`: health, time, blessings, gratitude
 - `Growth`: knowledge, curiosity, creativity, purpose, growth
 - `Living Fully`: adventure, experiences, happiness
+
+## What's Different From the Original
+
+This project started from [How to Be Rich](https://github.com/anvaka/how-to-be-rich) by Andrei Kashcha ([@anvaka](https://github.com/anvaka)) — an idea sparked by a TikTok video listing all the ways someone wanted to be rich. Since then it's diverged in a few ways:
+
+- **Domain-grouped homepage.** The original homepage is a flat grid of 23 equal-weight cards. This atlas groups them into 5 domains (Inner Life, Relationships, Vitality, Growth, Living Fully) so you see the shape of the whole landscape before choosing one area.
+- **One consistent topic structure.** Each original topic page hand-authored its own set of roughly 10 expandable "tip cards" plus a randomly rotating quote, and the structure varied page to page. Every topic here follows the same compact shape instead: a definition, why it matters, three practice prompts (`Notice` / `Choose` / `Practice`), and a small set of reflection questions.
+- **Single source of truth for content.** The original duplicated its topic list across `index.html`'s inline script and a separate `richThings.js` — and the two had drifted out of sync (the original `richThings.js` is missing `faith`). This project keeps all topic and domain data in one typed module (`src/content.ts`), and a test (`content.test.ts`) enforces that every topic is complete and belongs to exactly one domain, so that kind of drift can't happen silently.
+- **Typed build and test suite.** The original is plain static HTML/CSS with an inline `<script>` per page — no package manager, no tests, no CI. This project is a Vite + TypeScript build with a Vitest test suite (content integrity and routing) and a GitHub Actions workflow that runs tests before every deploy.
+- **Single-page app.** The original ships 24 separate HTML files, each duplicating the page shell. This is a single-page app with hash routing (`#/`, `#/topic/<slug>`, `#/about`) built from shared view functions, so there's one shell instead of 24 copies of it.
+
+To be clear, none of this makes the new version strictly "better" — the original's per-topic tip lists cover more ground per page. This atlas trades some of that breadth for consistency and easier maintenance.
 
 ## Quick Start
 
@@ -114,4 +129,4 @@ Licensed under [AGPL-3.0](LICENSE).
 
 ## Credits
 
-Created by TMFNK. Based on Kashcha.
+Created by TMFNK. Based on [How to Be Rich](https://github.com/anvaka/how-to-be-rich) by [Andrei Kashcha](https://github.com/anvaka).
